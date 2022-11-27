@@ -3,13 +3,12 @@ import ru.netology.magicbox.MagicBox;
 public class Main {
         public static void main(String[] args) {
             System.out.println("==============================================================================");
-            MagicBox<String> magicBox = new MagicBox<>("Волшебный ящик", 5);
-            magicBox.add("Малина");
-            magicBox.add("Монета");
-            magicBox.add("Шар");
-            magicBox.add("Звезда");
-            magicBox.add("Конфета");
-            magicBox.add("Кролик");
+            MagicBox<Number> magicBox = new MagicBox<>("Волшебный ящик", 4);
+            magicBox.add(10);
+            magicBox.add(200);
+            magicBox.add(1000);
+            magicBox.add(555);
+
 
             System.out.print("Случайное значение: "); magicBox.Random();
 

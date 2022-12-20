@@ -1,6 +1,5 @@
 package ru.netology.magicbox;
 
-import java.util.Arrays;
 import java.util.Random;
 
 public class MagicBox<T> {
@@ -25,22 +24,17 @@ public class MagicBox<T> {
         return false;
     }
 
-    public T Random() {
-        Random random = new Random();
-        int randomInt = random.nextInt(items.length);
-        System.out.println(items[randomInt]);
-        return null;
-    }
 
-    public T pick() {
+    public void pick() {
         for (int i = 0; i < items.length; i++) {
             if (items[i] == null) {
                 throw new RuntimeException("Есть свободное место");
             }
         }
         System.out.print("Случайное значение: ");
-        Random();
+        Random random = new Random();
+        int randomInt = random.nextInt(items.length);
+        System.out.println(items[randomInt]);
 
-        return null;
     }
 }
